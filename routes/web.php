@@ -21,6 +21,7 @@ use App\Http\Controllers\Guru\AbsensiGuruController;
 
 use Illuminate\Support\Facades\Artisan;
 
+
 // Halaman welcome
 Route::get('/', function () {
     return view('welcome');
