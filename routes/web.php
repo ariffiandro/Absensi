@@ -69,12 +69,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('siswa', SiswaController::class);
 });
 
-
-// GURU/KONTRIBUTOR
-Route::middleware(['auth', 'role:guru'])->group(function () {
-    Route::get('/dashboard-guru', [GuruController::class, 'index'])->name('guru.dashboard');
-});
-
 // SISWA
 Route::middleware(['auth', 'role:siswa'])->group(function () {
     Route::get('/dashboard-siswa', [LoginSiswaController::class, 'index'])
