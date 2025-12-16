@@ -23,7 +23,7 @@
             <input type="time" name="jam_selesai" class="form-control mb-2">
 
             <select name="guru_id" class="form-control mb-3">
-                <option value="">-- Pilih Dosen --</option>
+                <option value="">-- Pilih Guru --</option>
                 @foreach($guru as $g)
                     <option value="{{ $g->id }}">{{ $g->nama }}</option>
                 @endforeach

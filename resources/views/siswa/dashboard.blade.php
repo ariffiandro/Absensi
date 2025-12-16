@@ -48,7 +48,7 @@
                     {{ substr($k->jam_mulai,0,5) }} - {{ substr($k->jam_selesai,0,5) }}
                 </div>
                 <div class="kelas-info">
-                    Dosen: {{ $k->guru->nama ?? '-' }}
+                    Guru: {{ $k->guru->nama ?? '-' }}
                 </div>
             </div>
 

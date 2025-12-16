@@ -71,11 +71,11 @@
                     </div>
                 </div>
 
-                <!-- Dosen -->
+                <!-- Guru -->
                 <div class="mb-3">
-                    <label class="form-label">Dosen</label>
+                    <label class="form-label">Guru</label>
                     <select name="guru_id" class="form-control">
-                        <option value="">-- Pilih Dosen --</option>
+                        <option value="">-- Pilih Guru --</option>
                         @foreach($guru as $g)
                             <option value="{{ $g->id }}" {{ $kelas->guru_id == $g->id ? 'selected' : '' }}>
                                 {{ $g->nama }}

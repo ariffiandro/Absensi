@@ -16,7 +16,7 @@
                     <th>Nama</th>
                     <th>Hari</th>
                     <th>Jam</th>
-                    <th>Dosen</th>
+                    <th>Guru</th>
                     <th>Status</th>
                     <th>Aksi</th>
                 </tr>
