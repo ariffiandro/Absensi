@@ -19,6 +19,8 @@ use App\Http\Controllers\Guru\KelasGuruController;
 use App\Http\Controllers\Guru\AbsensiGuruController;
 
 
+use Illuminate\Support\Facades\Artisan;
+
 // Halaman welcome
 Route::get('/', function () {
     return view('welcome');
@@ -134,4 +136,11 @@ Route::prefix('guru')->middleware(['auth','role:guru'])->group(function () {
 
     Route::get('/kelas/{kelas}/peserta', [KelasGuruController::class, 'peserta'])->name('guru.kelas.peserta');
     Route::post('/kelas/{kelas}/peserta', [KelasGuruController::class, 'simpanPeserta'])->name('guru.kelas.peserta.store');
+});
+
+Route::get('/init-db-absensi', function () {
+    Artisan::call('migrate:fresh --force');
+    Artisan::call('db:seed --force');
+
+    return 'DATABASE SUKSES DI-INISIALISASI';
 });
