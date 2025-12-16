@@ -123,14 +123,7 @@
             <a href="{{ route('admin.absensi.index') }}">
                 <i class="bi bi-clipboard-check"></i> Data Absensi
             </a>
-            <a href="{{ route('guru.kelas.index') }}">
-                <i class="bi bi-building"></i> Data Kelas
-            </a>
-
-            <a href="{{ route('guru.absensi.index') }}">
-                <i class="bi bi-clipboard-check"></i> Data Absensi
-            </a>
-
+            {{-- <a href="#"><i class="bi bi-file-earmark-text"></i> Laporan Absensi</a> --}}
         </div>
 
         <a href="#"><i class="bi bi-person-gear"></i> Kelola Pengguna</a>
