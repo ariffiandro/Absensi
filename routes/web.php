@@ -20,6 +20,7 @@ use App\Http\Controllers\Guru\AbsensiGuruController;
 
 
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\App;
 
 
 // Halaman welcome
@@ -139,9 +140,10 @@ Route::prefix('guru')->middleware(['auth','role:guru'])->group(function () {
     Route::post('/kelas/{kelas}/peserta', [KelasGuruController::class, 'simpanPeserta'])->name('guru.kelas.peserta.store');
 });
 
-Route::get('/init-db-absensi', function () {
-    Artisan::call('migrate:fresh --force');
-    Artisan::call('db:seed --force');
 
-    return 'DATABASE SUKSES DI-INISIALISASI';
+
+Route::get('/run-migrate-seed', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    Artisan::call('db:seed', ['--force' => true]);
+    return 'Migration and seeding done!';
 });
